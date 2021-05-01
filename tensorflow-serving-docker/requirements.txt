@@ -1,0 +1,7 @@
+# grpcio
+# grpcio-tools
+keras-nightly==2.5.0.dev2021032900
+numpy
+tensorflow==2.5.0rc1
+Flask==1.1.1
+Keras-Preprocessing==1.1.2
