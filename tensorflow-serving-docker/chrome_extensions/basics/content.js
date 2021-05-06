@@ -4,6 +4,13 @@ let comment = 0;
 let toxicComment = 0;
 let highToxicComment = 0;
 
+
+chrome.storage.sync.set({
+    'comment': 0,
+    'toxicComment': 0,
+    'highToxicComment': 0
+});
+
 const startApp = () => {
     const sendToxicCheck = () => {
         console.log("Send texts");
@@ -16,8 +23,6 @@ const startApp = () => {
             else wholeText = e.querySelector("#content-text").innerHTML;
             return wholeText;
         });
-
-        console.log(texts);
 
         fetch("http://localhost:5000/api/checked_toxic", {
             method: "POST",
@@ -86,9 +91,11 @@ const startApp = () => {
                     }
                     tag.classList.add("checked");
 
-                    localStorage.setItem('comment', comment);
-                    localStorage.setItem('toxicComment', toxicComment);
-                    localStorage.setItem('highToxicComment', highToxicComment);
+                    chrome.storage.sync.set({
+                        'comment': comment,
+                        'toxicComment': toxicComment,
+                        'highToxicComment': highToxicComment
+                    });
                 });
             })
             .catch(error => {
@@ -96,10 +103,12 @@ const startApp = () => {
             });
     }
 
-    const runApp = setTimeout(function repeatSend(){
-        sendToxicCheck();
-        setTimeout(repeatSend,1000)
-    });
+    const runApp = setTimeout(
+        function repeatSend() {
+            sendToxicCheck();
+            setTimeout(repeatSend, 500)
+        }
+    );
 }
 
 startApp(); 

@@ -1,16 +1,45 @@
+html {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
 body {
     margin: 0;
+    padding: 0;
+    overflow: auto;
     min-width: 500px;
+    font-family: Cambria, serif;
 }
 
 #content {
     padding: 1rem;
 }
 
+#header, #header *{
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #f2f3f4;
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+}
+
 .row {
     display: flex;
     justify-content: space-between;
     margin: 0 1rem;
+}
+
+.preview {
+    margin: 0 1rem;
+}
+
+.image-preview {
+    margin: 0.5rem;
 }
 
 .button {

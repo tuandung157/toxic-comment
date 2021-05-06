@@ -6,32 +6,36 @@
     <link href="popup.css" rel="stylesheet">
 </head>
 <body>
+    <div id="header">
+        <div style="height: fit-content; display: flex;">
+            <h1>Токсичный чекер</h1>
+        </div>
+        
+    </div>
     <div id="content">
-        <h2>Xin chào</h2>
         <div class="row">
-            <p>Số comment đã scan</p>
+            <p>Проверенные комментарии</p>
             <p id="comment">0</p>
         </div>
         <div class="row">
-            <p>Số comment toxic</p>
+            <p>Токсичные комментарии</p>
             <p id="toxic-comment">0</p>
         </div>
         <div class="row">
-            <p>Số comment high toxic</p>
+            <p>Высокотоксичные комментарии</p>
             <p id="high-toxic-comment">0</p>
         </div>
         <div class="row">
-            <p>Tỉ lệ comment toxic</p>
-            <p id="precent-toxic">0</p>
+            <p>Процент</p>
+            <p id="percent-toxic">0%</p>
+        </div>
+        <div class="preview">
+            <p>Превью</p>
         </div>
         <div class="row">
-            <p>Preview for video</p>
-            <div id="video-preview">
-
-            </div>
-        </div>
-        <div class="row">
-            <button id="update-button">Cập nhật</button>
+            <p></p>
+            <img class="image-preview" alt="Video rating" src="./icon/angel.svg" height="150px"/>
+            <p></p>
         </div>
     </div>
 </body>

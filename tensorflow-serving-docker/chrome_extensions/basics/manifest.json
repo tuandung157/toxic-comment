@@ -3,7 +3,7 @@
     "name": "Toxic Comment Remover",
     "description": "Extension to hide and remove toxic comments in Youtube",
     "version": "1.0",
-    "permissions": ["https://*/*"],
+    "permissions": ["https://*/*","storage"],
     "content_scripts": [
         {
             "matches": [
