@@ -9,14 +9,14 @@ body {
     padding: 0;
     overflow: auto;
     min-width: 500px;
-    font-family: Cambria, serif;
+    font-family: -apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
 }
 
 #content {
     padding: 1rem;
 }
 
-#header, #header *{
+#header * {
     margin: 0;
     padding: 0;
 }
@@ -24,18 +24,19 @@ body {
 #header {
     background-color: #f2f3f4;
     display: flex;
-    min-height: 80px;
+    justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 1rem;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
-    margin: 0 1rem;
 }
 
 .preview {
-    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .image-preview {

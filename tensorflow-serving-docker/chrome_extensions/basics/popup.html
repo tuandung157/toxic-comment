@@ -4,38 +4,41 @@
     <meta charset="UTF-8">
     <title>Toxic Comment Remover Popup</title>
     <link href="popup.css" rel="stylesheet">
+    <script type="text/javascript" src="chart.js"></script>
 </head>
 <body>
     <div id="header">
-        <div style="height: fit-content; display: flex;">
-            <h1>Токсичный чекер</h1>
-        </div>
-        
+        <img src="logo.png" height="50px" alt="logo">
+        <h2>Токсичный чекер</h2>
     </div>
     <div id="content">
-        <div class="row">
-            <p>Проверенные комментарии</p>
-            <p id="comment">0</p>
-        </div>
-        <div class="row">
-            <p>Токсичные комментарии</p>
-            <p id="toxic-comment">0</p>
-        </div>
-        <div class="row">
-            <p>Высокотоксичные комментарии</p>
-            <p id="high-toxic-comment">0</p>
-        </div>
-        <div class="row">
-            <p>Процент</p>
-            <p id="percent-toxic">0%</p>
-        </div>
+        <strong>Превью</strong>
         <div class="preview">
-            <p>Превью</p>
-        </div>
-        <div class="row">
-            <p></p>
             <img class="image-preview" alt="Video rating" src="./icon/angel.svg" height="150px"/>
-            <p></p>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+            <div>
+                <strong>Analyst</strong>
+                <div class="row">
+                    <p>Проверенные комментарии</p>
+                    <p id="comment">0</p>
+                </div>
+                <div class="row">
+                    <p>Токсичные комментарии</p>
+                    <p id="toxic-comment">0</p>
+                </div>
+                <div class="row">
+                    <p>Высокотоксичные комментарии</p>
+                    <p id="high-toxic-comment">0</p>
+                </div>
+                <div class="row">
+                    <p>Процент токсичных комментарии</p>
+                    <p id="percent-toxic">0%</p>
+                </div>
+            </div>
+            <div style="width: 50%">
+                <canvas id="myChart"></canvas>
+            </div>
         </div>
     </div>
 </body>
@@ -44,7 +47,7 @@
     -
     <a href="#">Trang chủ</a>
     <br/>
-    <br/>
+    <hr/>
     <script type="text/javascript" src="./popup.js"></script>
     (<a href="https://github.com/tuandung157">tuandung157</a>)
 </footer>
