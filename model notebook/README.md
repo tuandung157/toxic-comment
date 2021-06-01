@@ -3,7 +3,7 @@ model notebook
 
 file containing building machine learning model
 
-# Command 
+# instruction 
 
 ```bash
 # Dataset.ipynb
